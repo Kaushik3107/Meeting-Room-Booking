@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meeting Room Booking</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <h1>Meeting Room Booking</h1>
+      </div>
+    </nav>
+
+    <main>
+      <div class="row">
+        <section id="room-capacity" class="col">
+          <h2>Room Capacity</h2>
+          <ul id="room-list">
+            <li>
+              Conference Room: <span id="conference-room-capacity">10</span>
+            </li>
+            <li>Board Room: <span id="board-room-capacity">10</span></li>
+            <li>Free Room: <span id="free-room-capacity">10</span></li>
+          </ul>
+        </section>
+
+        <section id="booking-form" class="col">
+          <h2>Book a Meeting Room</h2>
+          <form id="meeting-form">
+            <div class="form-group">
+              <label for="room">Meeting Room:</label>
+              <select id="room" name="room">
+                <option value="conference-room">Conference Room</option>
+                <option value="board-room">Board Room</option>
+                <option value="free-room">Free Room</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="date">Date:</label>
+              <input type="date" id="date" name="date" />
+            </div>
+
+            <div class="form-group">
+              <label for="start-time">Start Time:</label>
+              <input type="time" id="start-time" name="start-time" />
+            </div>
+
+            <div class="form-group">
+              <label for="end-time">End Time:</label>
+              <input type="time" id="end-time" name="end-time" />
+            </div>
+
+            <div class="form-group">
+              <label for="total-time">Total Meeting Time:</label>
+              <input type="text" id="total-time" name="total-time" readonly />
+            </div>
+
+            <button type="button" id="book-meeting">Book Meeting</button>
+          </form>
+          <div id="feedback"></div>
+        </section>
+      </div>
+
+      <section id="booked-meetings">
+        <h2>Booked Meetings</h2>
+        <ul id="meetings-list">
+          <!-- Booked meetings will be listed here -->
+        </ul>
+      </section>
+    </main>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
